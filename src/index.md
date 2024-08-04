@@ -48,6 +48,7 @@ const get_kcal = function(kg, cm, years, sex) {
   </div>
 </div>
 
+<!--
 <div class="grid grid-cols-2" style="grid-auto-rows: 504px;">
   <div class="card">${
     resize((width) => Plot.plot({
@@ -76,6 +77,7 @@ const get_kcal = function(kg, cm, years, sex) {
     }))
   }</div>
 </div>
+-->
 
 <style>
 
