@@ -13,49 +13,12 @@
 <link rel="modulepreload" href="./_observablehq/runtime.js">
 <link rel="modulepreload" href="./_observablehq/stdlib.js">
 <link rel="modulepreload" href="./_observablehq/stdlib/inputs.js">
-<link rel="modulepreload" href="./_npm/@observablehq/plot@0.6.15/_esm.js">
 <link rel="modulepreload" href="./_npm/react-dom@18.3.1/client._esm.js">
 <link rel="modulepreload" href="./_npm/htl@0.3.1/_esm.js">
 <link rel="modulepreload" href="./_npm/isoformat@0.2.1/_esm.js">
-<link rel="modulepreload" href="./_npm/d3@7.9.0/_esm.js">
-<link rel="modulepreload" href="./_npm/interval-tree-1d@1.0.4/_esm.js">
 <link rel="modulepreload" href="./_npm/react-dom@18.3.1/_esm.js">
-<link rel="modulepreload" href="./_npm/d3-array@3.2.4/_esm.js">
-<link rel="modulepreload" href="./_npm/d3-axis@3.0.0/_esm.js">
-<link rel="modulepreload" href="./_npm/d3-brush@3.0.0/_esm.js">
-<link rel="modulepreload" href="./_npm/d3-chord@3.0.1/_esm.js">
-<link rel="modulepreload" href="./_npm/d3-color@3.1.0/_esm.js">
-<link rel="modulepreload" href="./_npm/d3-contour@4.0.2/_esm.js">
-<link rel="modulepreload" href="./_npm/d3-delaunay@6.0.4/_esm.js">
-<link rel="modulepreload" href="./_npm/d3-dispatch@3.0.1/_esm.js">
-<link rel="modulepreload" href="./_npm/d3-drag@3.0.0/_esm.js">
-<link rel="modulepreload" href="./_npm/d3-dsv@3.0.1/_esm.js">
-<link rel="modulepreload" href="./_npm/d3-ease@3.0.1/_esm.js">
-<link rel="modulepreload" href="./_npm/d3-fetch@3.0.1/_esm.js">
-<link rel="modulepreload" href="./_npm/d3-force@3.0.0/_esm.js">
-<link rel="modulepreload" href="./_npm/d3-format@3.1.0/_esm.js">
-<link rel="modulepreload" href="./_npm/d3-geo@3.1.1/_esm.js">
-<link rel="modulepreload" href="./_npm/d3-hierarchy@3.1.2/_esm.js">
-<link rel="modulepreload" href="./_npm/d3-interpolate@3.0.1/_esm.js">
-<link rel="modulepreload" href="./_npm/d3-path@3.1.0/_esm.js">
-<link rel="modulepreload" href="./_npm/d3-polygon@3.0.1/_esm.js">
-<link rel="modulepreload" href="./_npm/d3-quadtree@3.0.1/_esm.js">
-<link rel="modulepreload" href="./_npm/d3-random@3.0.1/_esm.js">
-<link rel="modulepreload" href="./_npm/d3-scale@4.0.2/_esm.js">
-<link rel="modulepreload" href="./_npm/d3-scale-chromatic@3.1.0/_esm.js">
-<link rel="modulepreload" href="./_npm/d3-selection@3.0.0/_esm.js">
-<link rel="modulepreload" href="./_npm/d3-shape@3.2.0/_esm.js">
-<link rel="modulepreload" href="./_npm/d3-time@3.1.0/_esm.js">
-<link rel="modulepreload" href="./_npm/d3-time-format@4.1.0/_esm.js">
-<link rel="modulepreload" href="./_npm/d3-timer@3.0.1/_esm.js">
-<link rel="modulepreload" href="./_npm/d3-transition@3.0.1/_esm.js">
-<link rel="modulepreload" href="./_npm/d3-zoom@3.0.0/_esm.js">
-<link rel="modulepreload" href="./_npm/binary-search-bounds@2.0.5/_esm.js">
 <link rel="modulepreload" href="./_npm/react@18.3.1/_esm.js">
 <link rel="modulepreload" href="./_npm/scheduler@0.23.2/_esm.js">
-<link rel="modulepreload" href="./_npm/internmap@2.0.3/_esm.js">
-<link rel="modulepreload" href="./_npm/delaunator@5.0.1/_esm.js">
-<link rel="modulepreload" href="./_npm/robust-predicates@3.0.2/_esm.js">
 <link rel="icon" href="./_file/observable.1af93621.png" type="image/png" sizes="32x32">
 <script type="module">
 
@@ -120,40 +83,6 @@ sexInput
 ))
 }});
 
-define({id: "7935742a", mode: "inline", inputs: ["resize","Plot","aapl","display"], body: async (resize,Plot,aapl,display) => {
-display(await(
-    resize((width) => Plot.plot({
-      title: "Your awesomeness over time 🚀",
-      subtitle: "Up and to the right!",
-      width,
-      y: {grid: true, label: "Awesomeness"},
-      marks: [
-        Plot.ruleY([0]),
-        Plot.lineY(aapl, {x: "Date", y: "Close", tip: true})
-      ]
-    }))
-  
-))
-}});
-
-define({id: "699041c1", mode: "inline", inputs: ["resize","Plot","penguins","display"], body: async (resize,Plot,penguins,display) => {
-display(await(
-    resize((width) => Plot.plot({
-      title: "How big are penguins, anyway? 🐧",
-      width,
-      grid: true,
-      x: {label: "Body mass (g)"},
-      y: {label: "Flipper length (mm)"},
-      color: {legend: true},
-      marks: [
-        Plot.linearRegressionY(penguins, {x: "body_mass_g", y: "flipper_length_mm", stroke: "species"}),
-        Plot.dot(penguins, {x: "body_mass_g", y: "flipper_length_mm", stroke: "species", tip: true})
-      ]
-    }))
-  
-))
-}});
-
 </script>
 <div id="observablehq-center">
 <main id="observablehq-main" class="observablehq">
@@ -170,10 +99,36 @@ display(await(
     <observablehq-loading></observablehq-loading><!--:11cf77d0:-->
   </div>
 </div>
+<!--
 <div class="grid grid-cols-2" style="grid-auto-rows: 504px;">
-  <div class="card"><observablehq-loading></observablehq-loading><!--:7935742a:--></div>
-  <div class="card"><observablehq-loading></observablehq-loading><!--:699041c1:--></div>
+  <div class="card">${
+    resize((width) => Plot.plot({
+      title: "Your awesomeness over time 🚀",
+      subtitle: "Up and to the right!",
+      width,
+      y: {grid: true, label: "Awesomeness"},
+      marks: [
+        Plot.ruleY([0]),
+        Plot.lineY(aapl, {x: "Date", y: "Close", tip: true})
+      ]
+    }))
+  }</div>
+  <div class="card">${
+    resize((width) => Plot.plot({
+      title: "How big are penguins, anyway? 🐧",
+      width,
+      grid: true,
+      x: {label: "Body mass (g)"},
+      y: {label: "Flipper length (mm)"},
+      color: {legend: true},
+      marks: [
+        Plot.linearRegressionY(penguins, {x: "body_mass_g", y: "flipper_length_mm", stroke: "species"}),
+        Plot.dot(penguins, {x: "body_mass_g", y: "flipper_length_mm", stroke: "species", tip: true})
+      ]
+    }))
+  }</div>
 </div>
+-->
 <style>
 
 .hero {
@@ -218,6 +173,6 @@ display(await(
 </style>
 </main>
 <footer id="observablehq-footer">
-<div>Built with <a href="https://observablehq.com/" target="_blank" rel="noopener noreferrer">Observable</a> on <a title="2024-08-04T21:46:33">Aug 4, 2024</a>.</div>
+<div>Built with <a href="https://observablehq.com/" target="_blank" rel="noopener noreferrer">Observable</a> on <a title="2024-08-05T14:51:02">Aug 5, 2024</a>.</div>
 </footer>
 </div>
