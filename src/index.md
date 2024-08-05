@@ -36,7 +36,23 @@ const get_kcal = function(kg, cm, years, sex) {
 
 <div class="hero">
   <h1>${get_kcal(weight_kg, height_cm, age_years, sex)} kcal</h1>
-  <h2>Welcome to your new project! Edit&nbsp;<code style="font-size: 90%;">src/index.md</code> to change this page.</h2>
+  <h2>Your Total Daily Energy Expenditure based on activity level:</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Activity level</th>
+        <th>TDEE</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Sedentary</td><td>${Math.round(1.2 * get_kcal(weight_kg, height_cm, age_years, sex))} kcal</td></tr>
+      <tr><td>Lightly active</td><td>${Math.round(1.375 * get_kcal(weight_kg, height_cm, age_years, sex))} kcal</td></tr>
+      <tr><td>Moderately active</td><td>${Math.round(1.55 * get_kcal(weight_kg, height_cm, age_years, sex))} kcal</td></tr>
+      <tr><td>Very active</td><td>${Math.round(1.725 * get_kcal(weight_kg, height_cm, age_years, sex))} kcal</td></tr>
+      <tr><td>Super active</td><td>${Math.round(1.9 * get_kcal(weight_kg, height_cm, age_years, sex))} kcal</td></tr>
+    </tbody>
+  </table>
+
 </div>
 
 <div class="grid grid-cols-1">

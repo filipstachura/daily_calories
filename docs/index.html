@@ -59,6 +59,36 @@ get_kcal(weight_kg, height_cm, age_years, sex)
 ))
 }});
 
+define({id: "25a76260", mode: "inline", inputs: ["get_kcal","weight_kg","height_cm","age_years","sex","display"], body: async (get_kcal,weight_kg,height_cm,age_years,sex,display) => {
+display(await(
+Math.round(1.2 * get_kcal(weight_kg, height_cm, age_years, sex))
+))
+}});
+
+define({id: "1a267ced", mode: "inline", inputs: ["get_kcal","weight_kg","height_cm","age_years","sex","display"], body: async (get_kcal,weight_kg,height_cm,age_years,sex,display) => {
+display(await(
+Math.round(1.375 * get_kcal(weight_kg, height_cm, age_years, sex))
+))
+}});
+
+define({id: "9c4cf3a2", mode: "inline", inputs: ["get_kcal","weight_kg","height_cm","age_years","sex","display"], body: async (get_kcal,weight_kg,height_cm,age_years,sex,display) => {
+display(await(
+Math.round(1.55 * get_kcal(weight_kg, height_cm, age_years, sex))
+))
+}});
+
+define({id: "dca8aa27", mode: "inline", inputs: ["get_kcal","weight_kg","height_cm","age_years","sex","display"], body: async (get_kcal,weight_kg,height_cm,age_years,sex,display) => {
+display(await(
+Math.round(1.725 * get_kcal(weight_kg, height_cm, age_years, sex))
+))
+}});
+
+define({id: "ad8f69e3", mode: "inline", inputs: ["get_kcal","weight_kg","height_cm","age_years","sex","display"], body: async (get_kcal,weight_kg,height_cm,age_years,sex,display) => {
+display(await(
+Math.round(1.9 * get_kcal(weight_kg, height_cm, age_years, sex))
+))
+}});
+
 define({id: "c4688414", mode: "inline", inputs: ["weightInput","display"], body: async (weightInput,display) => {
 display(await(
 weightInput
@@ -89,7 +119,22 @@ sexInput
 <div class="observablehq observablehq--block"><!--:e3ad372e:--></div>
 <div class="hero">
   <h1><observablehq-loading></observablehq-loading><!--:6bb0b774:--> kcal</h1>
-  <h2>Welcome to your new project! Edit&nbsp;<code style="font-size: 90%;">src/index.md</code> to change this page.</h2>
+  <h2>Your Total Daily Energy Expenditure based on activity level:</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Activity level</th>
+        <th>TDEE</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Sedentary</td><td><observablehq-loading></observablehq-loading><!--:25a76260:--> kcal</td></tr>
+      <tr><td>Lightly active</td><td><observablehq-loading></observablehq-loading><!--:1a267ced:--> kcal</td></tr>
+      <tr><td>Moderately active</td><td><observablehq-loading></observablehq-loading><!--:9c4cf3a2:--> kcal</td></tr>
+      <tr><td>Very active</td><td><observablehq-loading></observablehq-loading><!--:dca8aa27:--> kcal</td></tr>
+      <tr><td>Super active</td><td><observablehq-loading></observablehq-loading><!--:ad8f69e3:--> kcal</td></tr>
+    </tbody>
+  </table>
 </div>
 <div class="grid grid-cols-1">
   <div class="card">
@@ -173,6 +218,6 @@ sexInput
 </style>
 </main>
 <footer id="observablehq-footer">
-<div>Built with <a href="https://observablehq.com/" target="_blank" rel="noopener noreferrer">Observable</a> on <a title="2024-08-05T14:51:02">Aug 5, 2024</a>.</div>
+<div>Built with <a href="https://observablehq.com/" target="_blank" rel="noopener noreferrer">Observable</a> on <a title="2024-08-05T15:05:13">Aug 5, 2024</a>.</div>
 </footer>
 </div>
